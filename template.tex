@@ -1,0 +1,108 @@
+%==========================================
+% A LaTeX template of assignment for students of Weiyang College.
+% Designed and coded by Chen Yilin
+%==========================================
+% !! Build several times to refer the last page correctly !!
+
+\documentclass{article}
+% use \documentclass[UTF8]{ctexart} for Chinese encoded in UTF8
+\usepackage{fancyhdr}
+\usepackage{appendix}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[misc]{ifsym}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{yhmath}
+\usepackage{listings} 
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{lastpage}
+
+\lstset
+{
+    language = c++, % language
+    backgroundcolor = \color{yellow!10},
+    basicstyle = \small\ttfamily,
+    rulesepcolor= \color{gray},
+    breaklines = true,   % breakline if a line is too long
+    numbers = left, 
+    numberstyle = \small, 
+    keywordstyle = \color{blue}, 
+    commentstyle =\color{green!100}, 
+    stringstyle = \color{red!100}, 
+    frame = shadowbox, 
+    showspaces = false, 
+    columns = fixed,
+	tabsize = 4
+}                                      
+
+\geometry{a4paper,scale=0.8}
+\pagestyle{fancy}
+\fancypagestyle{preContent}
+{
+    \fancyhead[L]{\textbf{Name of Course}}
+	\fancyhead[R]{Name of Assignment} % Type the name of your course here
+    \renewcommand\headrulewidth{.5pt} % Type the name of your assignment here
+	\renewcommand\footrulewidth{.5pt}
+	\fancyfoot[C]{Page \quad \thepage \quad of \quad \pageref{LastPage}}
+	\fancyfoot[L]{\raisebox{-3ex}{\includegraphics[width=0.3\textwidth]{logoofwycollegewithwords.pdf}}}
+    \fancyfoot[R]{Your Name\\ Your ID Number or/and Email address} % Type your name, ID number and Email here
+}
+\pagestyle{preContent}
+
+\bibliographystyle{plain}
+\begin{document}
+	Your main text.
+
+	An example of code block.
+	\begin{lstlisting}
+// This is an example of code block.
+// Language: C++
+#include <iostream>
+using namespace std;
+int main ()
+{
+	cout << "Hello World!" << endl;
+	return 0;
+}
+	\end{lstlisting}
+
+	An example of pictures.
+	\begin{figure}[H]
+		\centering
+		\subfigure[Logo of Tsinghua Univ.]{
+		\label{Logo of THU}
+		\includegraphics[width=0.3\textwidth]{logoofthu.pdf}}
+		\subfigure[Logo of Weiyang College]{
+		\label{Logo of WYC}
+		\includegraphics[width=0.3\textwidth]{logoofwycollege.pdf}}
+		\caption{An example of pictures}
+	\end{figure}
+
+	An example of formula.
+	\begin{equation}
+		E = mc^2.
+	\end{equation}
+
+	An example of formulas.
+	\begin{align*}
+		&\nabla \cdot \mathbf{E}=\frac{\rho}{\varepsilon_{0}} \\
+		&\nabla \cdot \mathbf{B}=0 \\
+		&\nabla \times \mathbf{E}=-\frac{\partial \mathbf{B}}{\partial t} \\
+		&\nabla \times \mathbf{B}=\mu_{0} \mathbf{J}+\mu_{0} \varepsilon_{0} \frac{\partial \mathbf{E}}{\partial t}
+	\end{align*}
+
+	\quad \newline \quad
+
+	\textbf{Designed and coded by Chen Yilin from Weiyang College, Tsinghua University.}
+
+	\newpage
+	A new page.
+\end{document}
