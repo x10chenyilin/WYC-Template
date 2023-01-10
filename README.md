@@ -1,16 +1,10 @@
-#### What is this project for?
+# 自用的作业模板（LaTeX）
 
-​	This project is a LaTeX template of assignment, which contains a basic header and footer,
+主要包含了页眉和页脚设计。页眉有院系logo、课程名和作业名；页脚有姓名、联系方式和页码。
 
- provided for students of Weiyang College.
+### 更新
 
-#### Who made this?
+#### 2023.1.10更新
 
-Designed and coded by Chen Yilin in 2021/10/5.
-
-Contact me: yl-chen20@mails.tsinghua.edu.cn
-
-#### Github
-
-https://github.com/singlet-Carbene/WYC-Template
-
+- 美化了设计，将logo放置到右上角。
+- 删除了冗余文件。
