@@ -1,11 +1,13 @@
 %==========================================
-% A LaTeX template of assignment for students of Weiyang College.
+% A LaTeX template of assignment for students.
 % Designed and coded by Chen Yilin
 %==========================================
 % !! Build several times to refer the last page correctly !!
 
+% If Chinese is used, choose the second document class.
 \documentclass{article}
-% use \documentclass[UTF8]{ctexart} for Chinese encoded in UTF8
+% \documentclass[UTF8]{ctexart}
+
 \usepackage{fancyhdr}
 \usepackage{appendix}
 \usepackage{graphicx}
@@ -24,6 +26,11 @@
 \usepackage{xcolor}
 \usepackage{listings}
 \usepackage{lastpage}
+
+\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+\makeatother
 
 \lstset
 {
@@ -47,18 +54,27 @@
 \pagestyle{fancy}
 \fancypagestyle{preContent}
 {
-    \fancyhead[L]{\textbf{Name of Course}}
-	\fancyhead[R]{Name of Assignment} % Type the name of your course here
-    \renewcommand\headrulewidth{.5pt} % Type the name of your assignment here
-	\renewcommand\footrulewidth{.5pt}
-	\fancyfoot[C]{Page \quad \thepage \quad of \quad \pageref{LastPage}}
-	\fancyfoot[L]{\raisebox{-3ex}{\includegraphics[width=0.3\textwidth]{logoofwycollegewithwords.pdf}}}
-    \fancyfoot[R]{Your Name\\ Your ID Number or/and Email address} % Type your name, ID number and Email here
+    \fancyhead[L]{\textbf{Course} \\ Assignment} % Type the name of the course and assignment here
+	\fancyhead[R]{\raisebox{-1ex}{\includegraphics[width=0.3\textwidth]{logo-of-wycollege-full.pdf}}}
+    \renewcommand\headrulewidth{.1pt} 
+	\renewcommand\footrulewidth{.1pt}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\raisebox{-2ex}{Page \ \thepage \ of \ \pageref{LastPage}}}
+	% Type your name, e-mail address and department here
+    \fancyfoot[L]{Your Name$^{(\href{mailto:}{\textrm{\Letter})}}$\\ Weiyang Coll., Tsinghua Univ.}
 }
-\pagestyle{preContent}
 
 \bibliographystyle{plain}
 \begin{document}
+	\pagestyle{preContent}
+	\  \newline
+	\begin{center}
+		\textbf{\Large{Title} \\ \raisebox{-1ex}{***}}
+	\end{center}
+
+	% Use for Chinese document, put section title to the left.
+	% \CTEXsetup[format={\Large\bfseries}]{section}
+
 	Your main text.
 
 	An example of code block.
@@ -79,10 +95,10 @@ int main ()
 		\centering
 		\subfigure[Logo of Tsinghua Univ.]{
 		\label{Logo of THU}
-		\includegraphics[width=0.3\textwidth]{logoofthu.pdf}}
+		\includegraphics[width=0.3\textwidth]{logo-of-thu.pdf}}
 		\subfigure[Logo of Weiyang College]{
 		\label{Logo of WYC}
-		\includegraphics[width=0.3\textwidth]{logoofwycollege.pdf}}
+		\includegraphics[width=0.3\textwidth]{logo-of-wycollege.pdf}}
 		\caption{An example of pictures}
 	\end{figure}
 
@@ -101,8 +117,7 @@ int main ()
 
 	\quad \newline \quad
 
-	\textbf{Designed and coded by Chen Yilin from Weiyang College, Tsinghua University.}
-
 	\newpage
 	A new page.
+
 \end{document}
